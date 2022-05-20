@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="{{ url_for('static', filename='js/indexJs.js') }}"></script>
+</head>
+<body>
+<img id="uploadImg" width="400px", height="400px">
+<div>
+    <input type="file" id="chooseFile" name="chooseFile" accept="image/*" onchange="loadFile(this)">
+    <input type="text" id="fileName" name="fileName">
+    <button type="button" onclick="uploadFile()">업로드!</button>
+</div>
+<input type="text" id="searchName" name="searchName">
+<button>검색</button>
+
+</body>
+</html>
