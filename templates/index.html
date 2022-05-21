@@ -9,14 +9,15 @@
     <script src="{{ url_for('static', filename='js/indexJs.js') }}"></script>
 </head>
 <body>
-<img id="uploadImg" width="400px", height="400px">
+<img id="uploadImg" width="400px", height="400px" style="display: none">
 <div>
     <input type="file" id="chooseFile" name="chooseFile" accept="image/*" onchange="loadFile(this)">
     <input type="text" id="fileName" name="fileName">
     <button type="button" onclick="uploadFile()">업로드!</button>
 </div>
 <input type="text" id="searchName" name="searchName">
-<button>검색</button>
+<button onclick="clickSearchButton()">검색</button>
+<div id="result"></div>
 
 </body>
 </html>
