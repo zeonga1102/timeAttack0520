@@ -19,7 +19,6 @@ def home():
 def upload():
    file = request.files['file_give']
    fileName = request.form['title_give']
-   extension = file.filename.split('.')[-1]
 
    timestamp = datetime.datetime.utcnow().strftime('%Y%m%d%H%M%S%f')
 
