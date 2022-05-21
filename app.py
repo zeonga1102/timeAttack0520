@@ -2,6 +2,7 @@ from flask import Flask, render_template, request, jsonify
 import tensorflow as tf
 import numpy as np
 
+from werkzeug.utils import secure_filename
 import datetime
 
 from pymongo import MongoClient
@@ -22,7 +23,7 @@ def upload():
 
    timestamp = datetime.datetime.utcnow().strftime('%Y%m%d%H%M%S%f')
 
-   path = './static/img/' + fileName + '_' + timestamp + extension
+   path = './static/img/' + timestamp + secure_filename(file.filename)
    file.save(path)
 
    doc = {'path': path,
